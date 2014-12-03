@@ -10,7 +10,8 @@ namespace Väderstation_v2
     {
         static void Main(string[] args)
         {
-
+            List<double> temperaturLista = new List<double>();
+            double medelVarde = 
             while (true)
             {
                 Console.WriteLine("[L]ägg till temperaturmätning");
@@ -23,7 +24,7 @@ namespace Väderstation_v2
                 string val = Console.ReadLine();
                 Console.Clear();
 
-                List<double> temperaturLista = new List<double>();
+            //  List<double> temperaturLista = new List<double>(); // Move before-outside of while loop.
 
                 if (val == "L" || val == "l")
                 {
@@ -46,11 +47,22 @@ namespace Väderstation_v2
 
                         Console.WriteLine(i + ": " + temperaturLista[i]);
                     }
-
+                    
+                        // Summera värde på temperaturLista och dela med temperaturLista.Count!
+                        
                     Console.WriteLine("Medeltemperaturen är ");
                 }
                 else if (val == "T" || val == "t")
                 {
+                    // Använd for loop för att visa index nummer samt skriva ut listan. loopa varv variabeln och jämtför mot
+                    // temperaturLista.count metoden som räknar ut antalet element i listan. Avsluta med
+                    // Att skriva ut Ta bort [välj index nr] :
+                    
+                    {
+                    }
+                    
+                    // Skriv ut lista med överenstämmande nummerindex.
+                    
                     // Logik för att ta bort en temperaturmätning
                 }
                 else if (val == "A" || val == "a")
