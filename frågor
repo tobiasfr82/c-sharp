@@ -1,0 +1,21 @@
+13.1 Objekt vs Klasser
+Beskriv skilllnaden mellan ett objekt och en klass:
+
+Skillnaden mellan en klass och ett objekt är att en klass förklarar vad ett objekt är förnågot.
+
+vi använder exempelvis klassen int som beskriver "vad" en variabel är för något. Variabel blir då ett objekt av
+klassen och det är objektet vi aktivt använder. Inte själva klassen. 
+
+exempelvis 
+
+int x = 0;
+
+Här skapar vi objektet X och säger att det är av klassen int och att värdet på objektet är 0. Vi säger inte att klassen är 0.
+Man kan likna detta vid att vi använder receptet för att skapa en kaka som vi sedan kan påverka. Annars ändrar vi ju i receptet
+vilket vi inte vill. Vi vill ju äta kakan och inte receptet.
+
+-----------------------------------------------
+13.2 Object vs variabler
+
+Vad är skillnaden mellan object och variabler i C#
+
