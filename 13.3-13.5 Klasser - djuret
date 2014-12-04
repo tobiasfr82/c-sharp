@@ -1,0 +1,52 @@
+Variabler:
+
+Namn:
+Ras:
+Ålder:
+Ägare:
+Vikt:
+Längd:
+
+
+Metoder
+
+Bark()
+Fetch()
+Jump()
+WaveTail()
+
+class Dog
+{
+  // Public Dog Variables
+  
+  public string name;
+  public int age;
+  public string race;
+  public string owner;
+  public double weight;
+  public double length;
+  
+  // Public Dog Methods()
+  
+  public void Bark()
+  {
+    // logic for when Dog is suppose to bark => in relation to it's variables or other inputs.
+  }
+  
+  public void Fetch()
+  {
+    // logic for when Dog is suppose to Fetch()
+  }
+  
+  public void Jump()
+  {
+    // Logic for when the Dog is suppose to Jump() => Maybe via menu input command from user?
+  }
+  
+  public void WaveTail()
+  {
+    // Logic for when the Dog is suppose to WaveTail()
+  }
+  
+  
+}
