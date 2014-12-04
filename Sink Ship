@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sink_Ship_Singleplayer
+{
+
+    /* PSEUDO-CODE
+     * 
+     * CREATE PLAYING FIELD 4X4 SIZE
+     * SPAWN 1X1 SIZED ENEMY SHIP RANDOMLY ON PLAYINGFIELD
+     * 
+     * DISPLAY PLAYING FIELD WITHOUT ENEMY
+     * PRINT user instructions
+     * INPUT user shots
+     * CHECK HIT or MISS
+     * COUNT SHOT
+     * UPDATE GAME ACCORDINGLY
+     * WHEN WON display score (how many shots it took to finish the game).
+     */
+
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+            // During dev mode display true view and player view.
+        {
+            // Create blank gameboard
+            
+            int[,] gameBoard = new int[,]
+            {
+                {0,0,0,0},
+                {0,0,0,0},
+                {0,0,0,0},
+                {0,0,0,0},
+            };
+
+            // Print out actual gameBoard, the outer for loop
+            Console.Write(" |1|2|3|4");
+          //  int indexRow = 0;
+
+            for (int row = 0; row < gameBoard.GetLength(0); row++)
+            {
+                // Print the gameBoard layout
+
+           //     Console.Write(indexRow + "|");
+           //     indexRow++;
+
+                // Console.Write(row + "|");
+
+                // The inner for-loop goes through vector horisontaly
+
+                for (int col = 0; col < gameBoard.GetLength(1); col++)
+                {
+
+
+                    // Print the element in just this position in the vector
+
+                  
+                    //  Console.Write(gameBoard[row, col] + "|");
+                }
+
+                Console.WriteLine("");
+                
+            }
+            // Console.WriteLine("------------------");
+
+
+            // Print out the players gameBoard
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
