@@ -1,19 +1,19 @@
-Variabler:
-
-Namn:
-Ras:
-Ålder:
-Ägare:
-Vikt:
-Längd:
-
-
-Metoder
-
-Bark()
-Fetch()
-Jump()
-WaveTail()
+/* Variabler:
+*
+* Namn:
+* Ras:
+* Ålder:
+* Ägare:
+* Vikt:
+* Längd:
+* 
+* Metoder
+* 
+* Bark()
+* Fetch()
+* Jump()
+* WaveTail()
+*/
 
 class Dog
 {
@@ -30,23 +30,64 @@ class Dog
   
   public void Bark()
   {
-    // logic for when Dog is suppose to bark => in relation to it's variables or other inputs.
+    Console.WriteLine(myDog.name + " is BARKING!");
   }
   
   public void Fetch()
   {
-    // logic for when Dog is suppose to Fetch()
+    Console.WriteLine(myDog.name + " is FETCHING A STICK!");
   }
   
   public void Jump()
   {
-    // Logic for when the Dog is suppose to Jump() => Maybe via menu input command from user?
+    Console.WriteLine(myDog.name + " is jumping!");
   }
   
   public void WaveTail()
   {
-    // Logic for when the Dog is suppose to WaveTail()
+    Console.WriteLine(myDog.name + " waving tail!");
   }
   
   
 }
+
+
+------------------------------ Lägg in i Main -----------------------
+
+Console.WriteLine("Answer the following questions to create your dog");
+Console.Write("Name your dog: ");
+Dog myDog.name = Console.ReadLine();
+
+Console.Write("set the age of your dog: ");
+Dog myDog.age = Console.ReadLine();
+
+Console.Write("Set the race of your dog: ");
+Dog myDog.race = Console.ReadLine();
+
+Console.Write("Enter owners name: ");
+Dog myDog.owner = Console.ReadLine();
+
+Console.Write("Enter the dogs weight: ");
+Dog myDog.weight = Console.ReadLine();
+
+Console.Write("Enter the dogs length: ");
+Dog myDog.length = Console.ReadLine();
+
+Console.WriteLine("This is what your Dog can do");
+myDog.Bark();
+myDog.Fetch();
+myDog.Jump();
+myDog.WaveTail();
+
+Console.WriteLine("This is the information about your dog");
+Console.WriteLine(myDog.Name);
+Console.WriteLine(myDog.Age);
+Console.WriteLine(myDog.Race);
+Console.WriteLine(myDog.Owner);
+Console.WriteLine(myDog.Weight);
+Console.WriteLine(myDog.Length);
+
+
+Console.ReadKey();
+
+
