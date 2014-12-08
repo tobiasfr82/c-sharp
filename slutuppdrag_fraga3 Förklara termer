@@ -1,7 +1,19 @@
 Förklara följande termer
 
 1. C#
+
+C# är ett sekventiellt, objekt-orienterad programmeringsspråk som även är turing-komplett. 
+Med turing-komplett menas det att C# kan räkna ut vilka matematiska problem som helst.
+Språket lanserades år 2000 där Anders Hjelsberg haft en stor roll i dess utvecklande.
+
 2. CIL
+CIL står för Common Intermedient Language och är det språk som C# kompileras till. Dock ej till sådan binär kod
+som processorn kan läsa. När programet sedan körs så kompileras det till binär kod som processorn kan läsa. 
+Fördelen med detta är att det går snabbare att ladda programmet, samt att man kan klöra samma program
+på en 32-bitars och 64-bitars processor. Eller en processor av helt annan typ ex. en processor av typen AMD.
+
+Denna teknik kallas för Just In Time, JIT-Kompilering. 
+
 3. private
 4. lista
 5. vektor
