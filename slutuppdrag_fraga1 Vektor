@@ -1,0 +1,78 @@
+// Lägg till Pseudo-kod eller motivering varför ej utförd
+// Motivera valda metoder för att lösa uppgiften.
+// Glöm inte poängtera att jag använder numbers.Length för att få rätt storlekt på vektorn.
+// Detta kringår det största problemet med att veta exakt hur står vektorn är när man 
+// Inte använder sig av Foreach.
+// Jag har även valt att skriva ut index i första övningen för att visa på den förståelsen.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace fraga1Vektor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[] { 1, 23, 43, 4, 2435, 2456, 4 };
+
+            // Loop through the whole vector using a For-loop.
+            // Loopa genom hela vectorn och skriv ut värdena med en For-loop.
+
+            Console.WriteLine("Printing out Vector elements on-screen using a For-loop");
+            for (int i = 0; i < numbers.Length; i++) // Declare the For-loop, including it's initializer, condition & iterator
+            {
+                Console.WriteLine("[" + i + "] " + numbers[i]); // To ADD or REMOVE INDEX simply remove/add before + numbers[i]:      "[" + i + "] " 
+            }
+            Console.WriteLine();
+           
+            // Console.ReadKey(); 
+
+            // Loop through the whole vector using a Foreach.
+            // Loopa genom hela vectorn och skriv ut värdena med en Foreach.
+            
+            // Console.Clear();
+
+            Console.WriteLine("Printing out Vector elements on-screen using a Foreach-loop");
+            foreach (var item in numbers) // Declare the Foreach loop and it's conditions. In this case I use the var type that automatically make use of the variables type. In this case Int.
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            
+            // Console.ReadKey();
+
+            // Loop through the whole vector using a While-loop.
+            // Loopa genom hela vectorn och skriv ut värdena med en While-loop.
+
+            Console.WriteLine("Printing out Vector elements on-screen using a While-loop");
+            int iWhile = 0;
+            while (iWhile < numbers.Length)
+            {
+                Console.WriteLine(numbers[iWhile]);
+                iWhile++;
+            }
+            Console.WriteLine();
+
+            // Console.ReadKey();
+
+            // Loop through the whole vector using a Do-While loop.
+            // Loopa genom hela vectorn och skriv ut värdena med en Do-While-loop.
+            Console.WriteLine("Printing out Vector elements on-screen using a Do-While loop");
+
+            int iDo = 0;
+            do
+            {
+                Console.WriteLine(numbers[iDo]);
+                iDo++;
+            } while (iDo < numbers.Length);
+
+
+            Console.ReadLine();
+        }
+    }
+}
