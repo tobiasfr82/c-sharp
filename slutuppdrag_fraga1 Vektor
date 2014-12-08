@@ -12,6 +12,27 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace fraga1Vektor
+
+/* PSEUDO-Kodning
+* Utgår pga. enkel kod.
+*/
+
+/* MOTIVERING av valda metoder
+* Övningen är relativt enkel att utföra. Jag har valt att inkludera Vektorns index i For-loopens utskrift
+* för att påvissa den kunskapen. Utöver detta har jag även inkluderat kommentering till koden för att underlätta
+* för de som inte är så vana vid programmering. Ex. ifall man vill plocka bort index utskriften i For-loopen.
+*
+* Användning av numbers.Length
+*
+* Även fast antalet element i vektorn är känd så har jag valt att använda mig av .length metoden för att automatiskt
+* få en kod som känner av storleken på vektorn. Detta underlättar kodningen i detta fall då vi inte behöver ha
+* exakt lika stor koll på storleken på vektorn när vi inte använder oss av Foreach.
+*
+* Kodning på Engelska
+*
+* Jag har även börjat nätverka med en del programmerare som pratar/kodar på engelska. Jag har därför inkluderat
+* viss kommentering på engelska för att börja öva upp den engelska terminologin.
+*/
 {
     class Program
     {
@@ -50,11 +71,12 @@ namespace fraga1Vektor
             // Loopa genom hela vectorn och skriv ut värdena med en While-loop.
 
             Console.WriteLine("Printing out Vector elements on-screen using a While-loop");
+            
             int iWhile = 0;
-            while (iWhile < numbers.Length)
+            while (iWhile < numbers.Length) // Decleration of the while-loop and conditions.
             {
                 Console.WriteLine(numbers[iWhile]);
-                iWhile++;
+                iWhile++; // Increase the value of iWhile with 1 using a additive operator
             }
             Console.WriteLine();
 
@@ -62,6 +84,7 @@ namespace fraga1Vektor
 
             // Loop through the whole vector using a Do-While loop.
             // Loopa genom hela vectorn och skriv ut värdena med en Do-While-loop.
+            
             Console.WriteLine("Printing out Vector elements on-screen using a Do-While loop");
 
             int iDo = 0;
