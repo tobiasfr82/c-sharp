@@ -9,12 +9,37 @@ Språket lanserades år 2000 där Anders Hjelsberg haft en stor roll i dess utve
 2. CIL
 CIL står för Common Intermedient Language och är det språk som C# kompileras till. Dock ej till sådan binär kod
 som processorn kan läsa. När programet sedan körs så kompileras det till binär kod som processorn kan läsa. 
-Fördelen med detta är att det går snabbare att ladda programmet, samt att man kan klöra samma program
-på en 32-bitars och 64-bitars processor. Eller en processor av helt annan typ ex. en processor av typen AMD.
+Fördelen med detta är att det går snabbare att ladda programmet, samt att man kan köra samma program
+på en 32-bitars och 64-bitars processor. Eller en processor av helt annan typ ex. en processor av typen AMD
+eller intel.
 
-Denna teknik kallas för Just In Time, JIT-Kompilering. 
+Denna teknik, att mellan-kompilera programmet kallas för Just In Time, JIT-Kompilering. 
 
 3. private
+När vi pratar om private så pratar vi om Klassmedlemmars synlighet.
+
+class MinKlass
+{
+  private double decimalTal;
+}
+
+Med private styr vi här synligheten för variabeln decimalTal som nu inte syns utanför den egna klassen. Den går
+med andra ord inte att anropa någon annanstans ifrån än just inom klassen MinKlass. En private variabel går
+däremot att påverka med metod inom klassen som i sig kan påverkas utifrån om de är satta till att göra det.
+
+En klassmedlem, i detta fallet double decimalTal, räknas alltid som private om inget annat deklareras. För att
+den skall kunna åberopas utanför klassen MinKlass måste vi sätta den till public, dvs.
+
+class MinKlass
+{
+  public double decimalTal;
+}
+
+Att en klassmedlem sätts till private per automatik, om vi inte deklarerar den annorlunda, beror på att det är
+fördelaktigt att ha den just privat. Detta gör att vi dels undviker problem med variabel namn som krockar
+i program samt underlättar vid kodning i större projekt då olika programmerare inte behöver ta hänsyn till
+varandras klassmedlemar i de fall de kodar olika klasser.
+
 4. lista
 5. vektor
 6. returvärde
