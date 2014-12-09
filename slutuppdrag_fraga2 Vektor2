@@ -1,0 +1,19 @@
+string[] berries = new string[4] { "blåbär", "lingon", "björnbär", "krusbär" };
+
+
+for(int i = berries.length; i > 0; i--)
+{
+  Console.WriteLine(berries[i]);
+}
+
+  Console.WriteLine();
+  Console.WriteLine("Push any key to begin eternal while-loop");
+  Console.ReadKey();
+
+while(true)
+{
+  foreach (var item in berries)
+  {
+  Console.WriteLine(berries);
+  }
+}
