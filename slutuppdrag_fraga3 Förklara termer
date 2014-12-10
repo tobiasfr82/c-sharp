@@ -49,15 +49,38 @@ Man skapar en lista genom att använda följande Syntax:
 
 List<typ> identifierare = new List<typ>();
 
-Ex. List<string> svenskaOrter = new List<string>();
+Ex. List<string> svenskaOrter = new List<string>("Malmö", "Stockholm", "Östersund");
 
-För att lägga till värden i listan kan man antingen deklarera det inom den avslutande () eller
-använda svenskaOrter.Add(Värdet att lägga till);  det är just listans identifierare.Add() som lägger
-till värdet till listan.
-
-
+För att lägga till värden i listan kan man antingen deklarera det inom den avslutande () och då separera dem
+med ett komma-tecken ( , ) eller använda svenskaOrter.Add(Värdet att lägga till);  det är just listans 
+identifierare.Add() som lägger till värdet till listan.
 
 5. vektor
+En vektor är väldigt användbar inom programmering då man vill hålla reda på många saker samtidigt.
+Exempelvis kan en vektor innehålla mätdata såsom en industriel laseravläsning av ett 3-dimensionellt föremål
+(så länge man kan koppla ihop avläsnings-instrumented med en 3-dimensionell vektor inläsning). Alternativt
+något mer vanligt, användar inläst, mätdata som hastighetsmätningar eller dyl. 
+
+Däremot behöver en vektor inte bara användas för att ta hand om många mätvärden. Den kan även arbeta mer "internt"
+genom att exempelvis slumpgenerera en sänka-skepp spelplan eller hålla reda på de skott en artificiell motståndare
+skjuter i ett spel.
+
+En vektor kan vara multi-dimensionell, till skillnad från listor som endast är en-dimensionella. Däremot kan man inte
+ändra storleken på en vektor efter att den har deklarerats.
+
+Man skapar en vektor genom att använda följande Syntax:
+
+typ[] identifierare = new typ[] {};
+
+För att lägga till värden i listan kan man lägga till värdena inom {} och separera dem med ett komma-tecken ( , )
+
+ex.
+
+int[] antalKm = new int[] {2, 10, 25, 1, 250};
+
+
+
+
 6. returvärde
 7. inparameter
 8. identifierare
