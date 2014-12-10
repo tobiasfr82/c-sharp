@@ -40,11 +40,11 @@ namespace vektor_berries
     {
         static void Main(string[] args)
         {
-            string[] berries = new string[] { "blåbär", "lingon", "björnbär", "krusbär" }; // Declare String Vektor variabel with identifier Berries. Set it's value to the strings within {      }
+            string[] berries = new string[] { "blåbär", "lingon", "björnbär", "krusbär" }; // Declare String Vektor variabel with identifier Berries. Set it's value (elements) to the strings within {      }
 
-            Array.Reverse(berries); // Reverse the order of the string items in the Vector. Vector items will be print out in reverse order.
+            Array.Reverse(berries); // Reverse the order of the string elements in the Vector. Vector elements will be printed-out in reverse order.
 
-            for (int i = 0; i < berries.Length; i++) // Declaration of FOR-Loop to handle the print-out of all the items in the Vector berries.
+            for (int i = 0; i < berries.Length; i++) // Declaration of FOR-Loop to handle the print-out of all the elements in the Vector berries.
             {
                 Console.WriteLine(berries[i]);
             }
@@ -57,10 +57,10 @@ namespace vektor_berries
 
           while (true) // Declaration of infinite loop
           {
-                foreach (var element in berries) // Declaration of foreach loop to handle print-out of Vector berries items.
+                foreach (var element in berries) // Declaration of foreach loop to handle print-out of Vector berries elements.
                {
                     Console.WriteLine(element);
-                    Console.ReadKey(); // Included to make it easier to see the print-out & order of the items in the berries vector.
+                    Console.ReadKey(); // Included to make it easier to see the print-out & order of the elements in the berries vector.
                }
            }
         }
