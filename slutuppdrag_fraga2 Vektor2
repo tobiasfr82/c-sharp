@@ -4,46 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace vektor_berries
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string[] berries = new string[] { "blåbär", "lingon", "björnbär", "krusbär" };
 
-            string[] berries = new string[] { "blåbär", "lingon", "björnbär", "krusbär", };
+            Array.Reverse(berries);
 
-            foreach (string element in berries)
+            
+
+            for (int i = 0; i < berries.Length; i++)
             {
-                Console.WriteLine(element);
-            }
+                Console.WriteLine(berries[i]);
 
+            }
+            Console.WriteLine();
+            Console.WriteLine("Push any key to begin eternal while-loop");
             Console.ReadKey();
+
+           Array.Reverse(berries);
+
+          while (true)
+          {
+                foreach (var element in berries)
+               {
+                    Console.WriteLine(element);
+                    Console.ReadKey();
+               }
+           }
         }
     }
-}
-
-
-
-------------------------------------------------------------
-
-
-string[] berries = new string[] { "blåbär", "lingon", "björnbär", "krusbär" };
-
-
-for(int i = berries.length; i > 0; i--)
-{
-  Console.WriteLine(berries[i]);
-}
-
-  Console.WriteLine();
-  Console.WriteLine("Push any key to begin eternal while-loop");
-  Console.ReadKey();
-
-while(true)
-{
-  foreach (var item in berries)
-  {
-  Console.WriteLine(berries);
-  }
 }
