@@ -78,10 +78,32 @@ ex.
 
 int[] antalKm = new int[] {2, 10, 25, 1, 250};
 
-
-
-
 6. returvärde
+Ett returvärde är det värde som en metod skickar tillbaks efter att ha utfört det som den blivit programmerad till att göra.
+Detta görs genom funktionen return. Return brukar vanligtvis vara det sista som skrivs i en metod som skickar tillbaks
+returvärde.
+
+Viktigt att tänka på när man använder sig av returvärde (return) i en metod är att metoden inte kan deklareras som en void
+utan måste sättas till samma typ som returneras.
+
+ex. 
+
+FEL!
+static void minMetod(string namn)
+  // Logik för metoden
+  return ålder;
+
+Här returnerar vi en ålder som i logiken skulle varit satt till typen in. Då vi deklarerat att metoden är void så har vi
+sagt att den inte ska returnera ett värde vilket nu kommer orsaka ett kompileringsfel.
+
+RÄTT
+static int minMetod(string namn)
+  // Logik för metoden
+  return ålder;
+
+Nu har vi bytt ut void till int och kommer därför kunna returnera variabeln ålder som är av typen int. Om din variabel är av
+en annan typ så ersätter du int med din variabel typ.
+
 7. inparameter
 8. identifierare
 9. public
