@@ -104,6 +104,8 @@ static int minMetod(string namn)
 Nu har vi bytt ut void till int och kommer därför kunna returnera variabeln ålder som är av typen int. Om din variabel är av
 en annan typ så ersätter du int med din variabel typ.
 
+Slutligen, då vi pratar om returvärde, så är det värdet på variabeln ålder som returneras i fallet ovan.
+
 7. inparameter
 8. identifierare
 9. public
