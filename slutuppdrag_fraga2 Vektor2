@@ -4,35 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*  PSEUDO_Kodning
+*   Utgår pga enkelt program.
+*/
+
+/* MOTIVERING av valda metoder.
+*
+* Jag fortsätter här med min mer engelsk betonad kodning förutom med strängarna i vektorn då de
+* är uppgiftsstyrda. Min första tanke var att använda samma FOR-Loopning med hjälp av .Length metoden
+* som innan, fast då börja på det högsta vektor indexet och minska med 1 för varje varv tills 0 värdet
+* nåtts.
+*
+* Detta fick jag inte att fungera.
+*
+* Array.Reverse()
+*
+* Efter en del letande på MSDN så hittade jag denna metod som däremot löste uppgiften galant.
+* Detta gör att det blir väldigt tydligt vad det är som sker, särskilt då jag inte behöver
+* ändra om min grundläggande FOR-kodning.
+*
+* Det blir även mer uppenbart för andra som läser koden senare vad som sker då de inte behöver
+* förstå åt vilket håll FOR-loopen gör sin vektor utskrift. Istället räcker det med att man hittar
+* Array.Reverse(berries); för att förstå att den Vektorn (array) variabelns ordning har ändrats.
+*
+* Här använder jag den två gånger för att växla den ordningsföljd som vektorn skrivs ut på.
+*
+* I uppgiften ingick det att döpa vektorn till något lämpligt. Jag har här valt namnet berries.
+* Detta då det som bekant är vad just bär heter på engelska och fungerar väl i min engelsk-betonade
+* kodning.
+*/
+
 namespace vektor_berries
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string[] berries = new string[] { "blåbär", "lingon", "björnbär", "krusbär" };
+            string[] berries = new string[] { "blåbär", "lingon", "björnbär", "krusbär" }; // Declare String Vektor variabel with identifier Berries. Set it's value to the strings within {      }
 
-            Array.Reverse(berries);
+            Array.Reverse(berries); // Reverse the order of the string items in the Vector. Vector items will be print out in reverse order.
 
-            
-
-            for (int i = 0; i < berries.Length; i++)
+            for (int i = 0; i < berries.Length; i++) // Declaration of FOR-Loop to handle the print-out of all the items in the Vector berries.
             {
                 Console.WriteLine(berries[i]);
-
             }
+            
             Console.WriteLine();
             Console.WriteLine("Push any key to begin eternal while-loop");
             Console.ReadKey();
 
-           Array.Reverse(berries);
+           Array.Reverse(berries); // Reverse the Berries vector order back to normal order.
 
-          while (true)
+          while (true) // Declaration of infinite loop
           {
-                foreach (var element in berries)
+                foreach (var element in berries) // Declaration of foreach loop to handle print-out of Vector berries items.
                {
                     Console.WriteLine(element);
-                    Console.ReadKey();
+                    Console.ReadKey(); // Included to make it easier to see the print-out & order of the items in the berries vector.
                }
            }
         }
