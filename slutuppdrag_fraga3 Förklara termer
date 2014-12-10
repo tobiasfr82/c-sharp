@@ -41,6 +41,22 @@ i program samt underlättar vid kodning i större projekt då olika programmerar
 varandras klassmedlemar i de fall de kodar olika klasser.
 
 4. lista
+Med en lista kan man, till skillnad från en vektor, ändra storleken på efter det att den har skapats genom att 
+lägga till eller ta bort saker ur den. Den expanderar då med andra ord efter behov. Listor fungerar i övrigt ungefär
+som vektorer, dock med den skillnaden att de inte kan vara multi-dimensionella.
+
+Man skapar en lista genom att använda följande Syntax:
+
+List<typ> identifierare = new List<typ>();
+
+Ex. List<string> svenskaOrter = new List<string>();
+
+För att lägga till värden i listan kan man antingen deklarera det inom den avslutande () eller
+använda svenskaOrter.Add(Värdet att lägga till);  det är just listans identifierare.Add() som lägger
+till värdet till listan.
+
+
+
 5. vektor
 6. returvärde
 7. inparameter
