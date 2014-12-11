@@ -146,5 +146,19 @@ för att få det resultat som vi vill få.
 Man kan även skicka in flera inparametrar till samma metod. Man separerar dem då med komma-tecken ( , ).
 
 8. identifierare
+Identifierare är det namn som vi döper variablers värde till för att lättare kunna veta vad de gör samt vart
+vi använder dem. Det rekommenderas att man använder sig av beskrivande identifierare som underlättar förståelse
+för vilket sorts värde variabeln innehåller.
+
+syntax
+
+typ identifierare tilldelningstecken litteralvärde termeringstecken
+
+Ex.
+
+int tal = 5;
+
+I detta exempel är tal identifierare för variabeln av typen int med litteralvärde 5.
+
 9. public
 10. internal
