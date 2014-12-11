@@ -167,5 +167,10 @@ klassmedlemen.
 
 Samma sak gäller även för statiska medlemmar. Men då skriver man bara namnet på klassen direkt.
 
-
 10. internal
+Internal är ytterligare en synlighetsnivå för klassmedlemmar. Denna gången handlar det om att endast göra klassmedlemen
+synlig i samma fil den finns i. Detta är användbart vid större program som bygger på flertalet filer. Den direkta nyttan
+är då att man endast behöver kontrollera att klassmedlemen inte krockar med någon annan klassmedlem i samma fil och det kan
+då existera klassmedlemmar med samma namn så länge dessa finns i olika filer.
+
+Detta underlättar såklart när man är fler programmerare som jobbar i olika filer samtidigt.
