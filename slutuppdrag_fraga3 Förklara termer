@@ -161,4 +161,11 @@ int tal = 5;
 I detta exempel är tal identifierare för variabeln av typen int med litteralvärde 5.
 
 9. public
+Till skillnad från private som förklarats tidigare så kan en public klassmedlem kommas åt utifrån metoden genom de
+objekt som vi skapar. Vi kommer då åt objekten genom att skriva deras namn, följt av en punkt och därefter namnet på 
+klassmedlemen.
+
+Samma sak gäller även för statiska medlemmar. Men då skriver man bara namnet på klassen direkt.
+
+
 10. internal
