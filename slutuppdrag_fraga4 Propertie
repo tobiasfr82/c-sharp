@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;    
+
+namespace SlutuppdragFraga4
+{
+    class Age
+    {
+        private int age;
+        
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                if(value < 0)
+                    Console.WriteLine("ERROR! Age can only be a positive number.");
+                else
+                    age = value;
+            }
+        }
+        
+    }
+    
+    
+    public class SampleClass
+    {
+        public static void Main()
+        {
+            // Write hello world to the console
+            Console.WriteLine("Enter your age: ");
+            Console.ReadLine(strAge);
+            intInputAge = Convert.ToInt(strAge);
+            
+            Age myAge = new Age();
+            myAge.Age = intInputAge
+            
+            Console.WriteLine(myAge.Age);    
+            Console.ReadKey();
+        } // End of Main function (program statup)
+    } // End of SampleClass
+} // End of SampleNamespace
