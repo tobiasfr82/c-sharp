@@ -93,7 +93,7 @@ static void minMetod(string namn)
   // Logik för metoden
   return ålder;
 
-Här returnerar vi en ålder som i logiken skulle varit satt till typen in. Då vi deklarerat att metoden är void så har vi
+Här returnerar vi en ålder som i logiken skulle varit satt till typen int. Då vi deklarerat att metoden är void så har vi
 sagt att den inte ska returnera ett värde vilket nu kommer orsaka ett kompileringsfel.
 
 RÄTT
@@ -107,6 +107,44 @@ en annan typ så ersätter du int med din variabel typ.
 Slutligen, då vi pratar om returvärde, så är det värdet på variabeln ålder som returneras i fallet ovan.
 
 7. inparameter
+En inparameter är det som vi skickar in i en metod. Det är metoden som styr vad som händer med inparametern och
+oftast så returnerar metoden ett värde baserat på inparametern som vi skickat in. Ett exempel på detta är att
+man skickar in Namn och Födelsedata i en metod som kontrollerar om en person är myndig och returnerar ett sant
+eller falskt värde. 
+
+Det värdet kan man sedan använda när man gör en utskrift på skärmen som berättar för användaren att personen är 
+myndig.
+
+Man använder inparameter enligt följande syntax:
+
+static void minMetod(typ inparameternsIdentifierare)
+{
+  // Logiken för metoden
+}
+
+static void Main(string[] args)
+{
+  minMetod(inparameter);
+}
+
+ex.
+
+static void minMetod(string namn)
+{
+  // Logiken för metoden
+}
+
+static void Main(string[] args)
+{
+  minMetod("Johan");
+}
+
+I exemplet ovan har vi manuellt satt värdet till Johan och skickar det som en inparameter till metoden minMetod där
+den lagras i string variabeln namn. Innuti metoden skulle det finnas en logik för hur vi använder oss av namnet
+för att få det resultat som vi vill få. 
+
+Man kan även skicka in flera inparametrar till samma metod. Man separerar dem då med komma-tecken ( , ).
+
 8. identifierare
 9. public
 10. internal
