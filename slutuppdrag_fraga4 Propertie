@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;    
+using System.Threading.Tasks;
 
-namespace SlutuppdragFraga4
+namespace ConsoleApplication3
 {
     class Age
     {
         private int age;
-        
-        public int Age
+
+        public int Age2
         {
             get
             {
@@ -18,30 +18,30 @@ namespace SlutuppdragFraga4
             }
             set
             {
-                if(value < 0)
+                if (value < 0)
                     Console.WriteLine("ERROR! Age can only be a positive number.");
                 else
                     age = value;
             }
         }
-        
+
     }
     
-    
-    public class SampleClass
+    class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            // Write hello world to the console
-            Console.WriteLine("Enter your age: ");
-            Console.ReadLine(strAge);
-            intInputAge = Convert.ToInt(strAge);
+
+            Console.Write("Enter your age: ");
+            
+            string strAge = Console.ReadLine();
+            int inputAge = Convert.ToInt16(strAge);
             
             Age myAge = new Age();
-            myAge.Age = intInputAge
-            
-            Console.WriteLine(myAge.Age);    
-            Console.ReadKey();
-        } // End of Main function (program statup)
-    } // End of SampleClass
-} // End of SampleNamespace
+            myAge.Age2 = inputAge;
+
+            Console.WriteLine("Current age property is set to " + myAge.Age2 + " years");
+            Console.ReadKey();            
+        }
+    }
+}
