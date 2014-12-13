@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication3
 {
-    class Age
+    class AgeClass
     {
         private int age;
 
-        public int Age2
+        public int Age
         {
             get
             {
@@ -19,7 +19,7 @@ namespace ConsoleApplication3
             set
             {
                 if (value < 0)
-                    Console.WriteLine("ERROR! Age can only be a positive number.");
+                    Console.WriteLine("ERROR! Age cannot be a negative number.");
                 else
                     age = value;
             }
@@ -37,10 +37,10 @@ namespace ConsoleApplication3
             string strAge = Console.ReadLine();
             int inputAge = Convert.ToInt16(strAge);
             
-            Age myAge = new Age();
-            myAge.Age2 = inputAge;
+            AgeClass myAge = new AgeClass();
+            myAge.Age = inputAge;
 
-            Console.WriteLine("Current age property is set to " + myAge.Age2 + " years");
+            Console.WriteLine("Current age property is set to " + myAge.Age + " years");
             Console.ReadKey();            
         }
     }
