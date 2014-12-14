@@ -1,1 +1,53 @@
-sf
+Därför är det viktigt att känna till sorteringsalgoritmer.
+
+Att känna till sorteringsalgoritmer som programmera är viktigt. Det blir lättare att hantera och lösa problem för
+användarna om en större mängd data är sorterad på ett sådant sätt som underlättar för användaren. 
+
+Säg att en användare vill hitta namnet på ett föranmält besök som står på en lista som inte är sorterad.
+
+Ex. osorterad lista
+
+Maria Johannesson
+Erik Andersson
+Margareta Eriksson
+Carl Persson
+Elisabet Karlsson
+Marianne Jonsson
+Kerstin Svensson
+Gunnar Olofsson
+Bengt Axelsson
+
+Det skulle ta ett tag att manuellt leta upp namnet på besöket i listan ovan jämfört med det sorterade exemplet.
+
+Ex. sorterad lista (sorterad efter förnamn).
+
+Bengt Axelsson
+Carl Persson
+Elisabet Karlsson
+Erik Andersson
+Gunnar Olofsson
+Kerstin Svensson
+Margareta Eriksson
+Maria Johannesson
+Marianne Jonsson
+
+Hade listan ovan innehållit 20, 50, 100 eller rent av 500 namn så hade denna enkla 
+sortering avsevärt underlättat för användaren. Som programmerare kan man ju även ge användaren möjlighet
+till att själv välja vilket värde som man kan sortera efter. Exempelvis Förnamn eller Efternamn i exemplet ovan.
+
+En annan aspekt till varför det är viktigt att känna till sorteringsalgoritmer är för att optimera användadet
+av sök och ihopslagning (merge) algoritmer.
+
+Vad gäller prestanda och minneshantering när det kommer till sorteringsalgoritmer så blir det egentligen inte ett
+problem föränn man börjar få slut på primärminne (RAM). Det är när Vektorn eller listan är större än minnet som
+det är avgörande vilken sorteringsalgoritm man använder. Om man nu inte vill optimera programmet innan för att
+inte ta upp systemresurser i onödan.
+
+Skatteverket har uppskattningsvis ett större behov av att ha optimerade sorteringsalgoritmer än vår lilla lista
+ovan.
+
+Avslutningsviss så används alltså sorteringsalgoritmer för att
+
+* Öka användarnyttan.
+* Optimera användandet av andra algoritmer (ex. sök och sammanslagnings algoritmer).
+* Optimerar minneshanteringen.
