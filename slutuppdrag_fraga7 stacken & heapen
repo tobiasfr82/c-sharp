@@ -1,22 +1,21 @@
-Stacken & Heapen finns på RAM-Minnet och tar tillsammans hand om de samlande variablerna etc. som vi programmerare skapar.
-De har även olika mycket utrymme att röra sig med där stacken har mindre utrymme och heapen har större. 
+(Egentligen vill jag hänvisa till mina mer djupgående svar av Stacken & Heapen i Uppdrag 3 - Uppgift 4 & 9 men har här valt att skriva ihop en mer övergripande
+sammanfattning av den informationen).
 
-Det Stacken saknar i utrymme tar den igen genom att vara en snabb minneshanterare. På Stacken läggs därför de deklarationerna
+Stacken & Heapen finns på RAM-Minnet och tar tillsammans hand om de samlade variablerna etc. som vi programmerare skapar.
+De har även olika mycket utrymme att röra sig med där stacken har mindre utrymme och heapen har större utrymme.
+
+Det Stacken saknar i utrymme tar den igen genom att vara en snabb minneshanterare. På Stacken läggs därför de deklarationer
 vi programmerare skapar och referenstyper & referensobjekt hamnar på Heapen.
 
 För att enklare visualisera hur Stacken och Heapen sammarbetar kan man säga att om du ser nyckelordet new i koden
 så är det i regel en referenstyp eller referensobjekt och ligger därför på heapen. Dock läggs själva deklarationen
 på Stacken.
 
-Man kan säga att deklarationen av hur en båt ska se ut ligger på stacken men själva båten som objekt läggs på heapen.
+Man kan säga att deklarationen av hur en båt ska se ut läggs på stacken men själva båten som objekt läggs på heapen.
 
 För att lägga till eller ta bort värden på stacken använder man sig av push() för att lägga till värden och pop() för
 att ta bort värden.
 
-Värderna man lägger till lägger sig ovanpå varandra, ungefär som pannkakor på en pannkakshög. Man måste sedan ta bort
-det översta värdet innan man kan ta bort de undre värdena. Det går med andra ord inte att ta bort ett värde i mitten
+Värderna som läggs till, lägger sig ovanpå varandra. Ungefär som pannkakor på en pannkakshög. Man måste sedan ta bort
+det översta (senast angivna värdet) innan man kan ta bort de undre värdena. Det går med andra ord inte att ta bort ett värde i mitten
 av högen.
-
-
-
-
