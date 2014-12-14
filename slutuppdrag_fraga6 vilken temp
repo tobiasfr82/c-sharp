@@ -1,1 +1,57 @@
-kjh
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/* PSEUDO-Code
+*
+* USER INPUT, How hot is the hotplate?
+* PRINT-Out if the water on the stove is ice, liquid or steam (depending on temperature)
+*/
+
+/* MOTIVERING av valda metoder
+*
+* Ännu en härligt knepig formulerad uppgift. Skapa ett Komplett program, "men jag behöver bara skriva main
+* metoden och eventuella metoder jag anropar". Då blir det ju inte ett komplett program.
+*
+* Jag har i vilket fall som helst valt att koda hela programet så att det löser programmets primära funktion.
+* Dvs att be användaren att ange gradtal på spisplattan och därefter hantera utskriften med hjälp av
+* jämförelse operatorer samt switch-case.
+*
+* Insåg däremot att switch-case inte var lämpligt i denna uppgift då selektionen av vad som skall skrivas ut
+* mer handlar om jämförelsespann ex. 0-100 grader = flytande. Det i kombination med att det är få utfall gör
+* att det i detta fallet är smidigare att använda IF satser för att lösa uppgiften.
+*/
+
+namespace slutUppdragFraga6
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.Write("Enter the hotplate temperature");
+      string strTemp = Console.ReadLine();
+      double temp = Convert.ToDouble(strTemp);
+      
+      If(temp < 0)
+      {
+        Console.WriteLine("The water on the stove is frozen ice.");
+      }
+      Else if(temp >= 0 && temp < 100)
+      {
+        Console.WriteLine("The water is in liquid form.");
+      }
+      Else if(temp > 100)
+      {
+        Console.WriteLine("The water is boiling into steam form.");
+      }
+      else
+      {
+        Console.WriteLine("The water is OUT OF THIS WORLD! You can only input numbers...");
+      }
+    
+    Console.ReadKey();
+    }
+  }
+}
