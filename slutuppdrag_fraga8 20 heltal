@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/* PSEUDO-Kod
+*
+* LÄS IN 20 heltal INOM LOOP
+* SPARA TALEN i VEKTOR
+* HITTA STÖRSTA Talet genom att LOOPA igenom det.
+* SKRIV UT STÖRSTA talet
+*
+*/
+
+/* MOTIVERING av valda metoder
+*
+* Har här återigen valt att lösa hela uppgiften. Har dock valt att kommentera på svenska denna gången då den
+* var lite mer komplex än de andra uppgifterna. Skulle gärna löst den med hjälp av både binär sökning samt rekursiv quick sort
+* men haft tidsbrist pga. mycket jobb nu innan jul.
+*
+* Jag använder Try & Catch här för att det är många tal som skall läsas in och därmed låta användaren prova igen om hen skriver fel.
+* Beroende på den typ av tal som ska läsas in så kan man utveckla programmet till att hantera int 64 eller double. 
+*
+*/
+
+namespace slutUppdragFraga8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int printTal = 1; // Deklaration av int variabel som skall underlätta utskriften av Tal angivelsen på skärmen. (Detta för att särskilja text angivelse från faktiskt loop-varv dvs lägg till +1 mot loop-varvet i tal utskriften.)
+            int[] talVektor = new int[20]; // Deklarerar en int vektor (talVektor), samt skapar plats för 20 vektor element i minnet.
+
+            for (int i = 0; i < 20; i++) // Deklarera for-loop som loopar inläsning etc. 20 gånger.
+            {
+                try 
+                {
+                    Console.Write("Ange tal " + printTal + ": "); // printTal börjar med tal1 utskrift även fast loop-varv är på 0. Syftet är att öka användarvänligheten och få Ange tal 1 istället för ange tal 0.
+                    string strTal = Console.ReadLine();
+                    int tal = Convert.ToInt16(strTal);
+
+                    talVektor[i] = tal; // Läs in användarens tal till rätt plats i vektorn.
+                    printTal++;
+                    Console.Clear();
+                }
+                catch
+                {
+                    Console.WriteLine("Du kan bara ange heltal.");
+                }
+            }
+
+            int max = talVektor[0]; // Deklarera int variabeln max och sett dess värde till första värdet i vektorn (talVektor).
+            foreach(int element in talVektor) // Använd en foreach loop för att loopa igenom alla element i talVektor.
+            {
+                if (max < element) // Jämför max med det nuvarandre elementet. Om max är mindre än värdet på det element man tittar på
+                {
+                    max = element; // Sätt värdet på max till element (då värdet på det element vi tittar på är större). 
+                                   // Är max större än elementet man tittar på så händer ingenting. Max behåller därmed värdet.
+                                   // På detta sätt loopar man igenom vektorn (talVektor) och får reda på dess högsta värde.
+                }
+            }
+
+            Console.WriteLine("Största talet är: " + max);
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
