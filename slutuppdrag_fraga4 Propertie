@@ -4,23 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication3
-{
-    class AgeClass
-    {
-        private int age;
+/* PSEUDO-KOD
+*
+* CREATE CLASS with COMPLETE Property
+* GET User INPUT to controll function.
+* DONT ALLOW negative values as input.
+* PRINT OUT property value to controll function.
+/*
 
-        public int Age
+/* MOTIVERING av valda metoder 
+* Här har jag valt att utveckla uppgiften marginellt. Istället för att bara skriva egenskapen (Propertie)
+* så har jag valt att lägga till en user input samt utskrift för att kontrollera funktionen så att allting
+* fungerar som det ska.
+*
+* Programmet kan utvecklas ytterligare genom att lägga till en Try & Catch funktion inuti klassen för att
+* låta användaren fortsätta försöka skriva in ett positivt värde om denne skrivit ett negativt tal. 
+* Detta kännde jag skulle bli overkill av uppgiften i sig då man bara efterfrågat en komplett propertie.
+*
+*/
+
+namespace slutUppdagFraga4
+{
+    class AgeClass // Custom class with complete class property
+    {
+        private int age; // Backingfield 
+
+        public int Age // Public method to allow alteration of the protected Backingfield.
         {
-            get
+            get       // Gets the value from the integrar variable with identifier age.
             {
                 return age;
             }
-            set
+            set      // Set the value of the integrar variable with identifier age-
             {
-                if (value < 0)
+                if (value < 0) // Checks if the value to be entered is negativ and prints out an error message.
                     Console.WriteLine("ERROR! Age cannot be a negative number.");
-                else
+                else // If the value is higher then, or equal to zero it will set the value to the inputed value.
                     age = value;
             }
         }
@@ -34,13 +53,13 @@ namespace ConsoleApplication3
 
             Console.Write("Enter your age: ");
             
-            string strAge = Console.ReadLine();
-            int inputAge = Convert.ToInt16(strAge);
+            string strAge = Console.ReadLine(); // Gets input from user.
+            int inputAge = Convert.ToInt16(strAge); // Converts string to int16 value.
             
-            AgeClass myAge = new AgeClass();
-            myAge.Age = inputAge;
+            AgeClass myAge = new AgeClass(); // Creates a new object from the class AgeClass with identifier myAge.
+            myAge.Age = inputAge; // Sets the age property of MyAge to inputAge (the user inputed value).
 
-            Console.WriteLine("Current age property is set to " + myAge.Age + " years");
+            Console.WriteLine("Current age property is set to " + myAge.Age + " years"); // Prints out the Age Property value.
             Console.ReadKey();            
         }
     }
