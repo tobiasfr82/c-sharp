@@ -26,6 +26,10 @@ using System.Threading.Tasks;
  * Även här kan man inkludera en try & catch funktion för att säkerställa att användaren bara skriver in siffror
  * men då man mer är intresserad av att kontrollera att jag kan använda jämförelse-operatorer så har jag valt att
  * inte inkludera det och därmed överarbeta uppgiften.
+ * 
+ * Utöver detta har jag inte valt att kommentera det mesta av koden nedan då den är av väldigt enkel typ.
+ * Hade programet varit större, eller mer komplext så hade jag valt att kommentera koden för att enklare komma
+ * ihåg vad den gjorde om jag skulle behöva återkomma till koden senare.
 */
 
 namespace slutUppdragFraga6
@@ -34,7 +38,7 @@ namespace slutUppdragFraga6
     {
         static void Main(string[] args)
     {
-      Console.Write("Enter the hotplate temperature with numbers in Celcius.");
+      Console.Write("Enter the hotplate temperature with numbers (in Celcius): ");
       string strTemp = Console.ReadLine();
       double temp = Convert.ToDouble(strTemp);
       
@@ -52,7 +56,7 @@ namespace slutUppdragFraga6
       }
       else
       {
-        Console.WriteLine("The water is OUT OF THIS WORLD! You can only input numbers...");
+        Console.WriteLine("The water is OUT OF THIS WORLD!"); // Handle any other temperature input that isn't covered by the above relational type testing operators. (All possible outcome should be accounted for already).
       }
     
         Console.ReadKey();
