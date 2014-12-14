@@ -22,27 +22,31 @@ using System.Threading.Tasks;
 * Insåg däremot att switch-case inte var lämpligt i denna uppgift då selektionen av vad som skall skrivas ut
 * mer handlar om jämförelsespann ex. 0-100 grader = flytande. Det i kombination med att det är få utfall gör
 * att det i detta fallet är smidigare att använda IF satser för att lösa uppgiften.
+ * 
+ * Även här kan man inkludera en try & catch funktion för att säkerställa att användaren bara skriver in siffror
+ * men då man mer är intresserad av att kontrollera att jag kan använda jämförelse-operatorer så har jag valt att
+ * inte inkludera det och därmed överarbeta uppgiften.
 */
 
 namespace slutUppdragFraga6
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      Console.Write("Enter the hotplate temperature");
+        static void Main(string[] args)
+    {
+      Console.Write("Enter the hotplate temperature with numbers in Celcius.");
       string strTemp = Console.ReadLine();
       double temp = Convert.ToDouble(strTemp);
       
-      If(temp < 0)
+      if(temp < 0)
       {
         Console.WriteLine("The water on the stove is frozen ice.");
       }
-      Else if(temp >= 0 && temp < 100)
+      else if(temp >= 0 && temp < 100)
       {
         Console.WriteLine("The water is in liquid form.");
       }
-      Else if(temp > 100)
+      else if(temp >= 100)
       {
         Console.WriteLine("The water is boiling into steam form.");
       }
@@ -51,7 +55,7 @@ namespace slutUppdragFraga6
         Console.WriteLine("The water is OUT OF THIS WORLD! You can only input numbers...");
       }
     
-    Console.ReadKey();
+        Console.ReadKey();
     }
-  }
+    }
 }
